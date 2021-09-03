@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "sha256": "^0.2.0"
+  },
+  "name": "lhash",
+  "version": "1.0.5",
+  "description": "Simple layered hashing module that allows for a bit more security when needed",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sha256",
+    "sha-256",
+    "hash",
+    "hashing",
+    "layered-hashing"
+  ],
+  "author": "Jay Fox",
+  "license": "ISC"
+}
