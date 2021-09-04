@@ -1,22 +1,23 @@
 // Helpers and connstants
 const sha256 = require("sha256")
 var dlog = function(){}
-
 // Exports
-exports.lhash128 = function(string) {
-    return encode(string, 128)
-}
-exports.lhash256 = function(string) {
-    return encode(string, 256)
-}
-exports.lhash512 = function(string) {
-    return encode(string, 512)
-}
-exports.lhash64k = function(string) {
-    return encode(string, 65536)
-}
-exports.lhashCustom = function(string, times, debug = false) {
-    return encode(string, times, debug)
+exports.lhash = {
+    "128":function(string) {
+        return encode(string, 128)
+    },
+    "256":function(string) {
+        return encode(string, 256)
+    },
+    "512":function(string) {
+        return encode(string, 512)
+    },
+    "64k":function(string) {
+        return encode(string, 65536)
+    },
+    "custom":function(string) {
+        return encode(string, 65536)
+    }
 }
 
 // Define the encode function

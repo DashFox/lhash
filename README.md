@@ -11,12 +11,12 @@ Simple layered sha-256 hashing for a bit more security
 There are two methods, one for computing the hash of the input, and one for double-hashing it:
 
 ```js
-const lhash = require("lhash");
-console.log(lhash.lhash128("string"))
-console.log(lhash.lhash256("string"))
-console.log(lhash.lhash512("string"))
-console.log(lhash.lhash64k("string"))
-console.log(lhash.lhashCustom("string", 2, false))
+const lhash = require("lhash").lhash;
+console.log(lhash.128("string"))
+console.log(lhash.256("string"))
+console.log(lhash.512("string"))
+console.log(lhash.64k("string"))
+console.log(lhash.custom("string", 2, false))
 ```
 #### The functions
 They take 2 args, one of them is optional (the last one)
@@ -28,7 +28,7 @@ Contains the string you want to hash
 Prints debug log if set to true, defualt is false.
 
 
-#### The `lhash.lhashCustom()` function
+#### The `lhash.custom()` function
 It takes 3 args
 
 ##### String
@@ -43,7 +43,7 @@ Prints debug log if set to true, defualt is false.
 
 ## Example 
 ```js
-const lhash = require("lhash")
+const lhash = require("lhash").lhash
 const sha256 = require("sha256")
 let string = "Hello";
 
@@ -58,7 +58,7 @@ console.timeEnd("Normal sha256")
 
 console.log("Now we hash it with 512 layers using lhash")
 console.time("lhash with 512 encoding layers")
-console.log(lhash.lhash512(string))
+console.log(lhash.512(string))
 console.timeEnd("lhash with 512 encoding layers")
 ```
 
