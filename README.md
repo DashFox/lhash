@@ -12,11 +12,11 @@ There are two methods, one for computing the hash of the input, and one for doub
 
 ```js
 const lhash = require("lhash").lhash;
-console.log(lhash.128("string"))
-console.log(lhash.256("string"))
-console.log(lhash.512("string"))
-console.log(lhash.64k("string"))
-console.log(lhash.custom("string", 2, false))
+console.log(lhash.l128("string"))
+console.log(lhash.l256("string"))
+console.log(lhash.l512("string"))
+console.log(lhash.l64k("string"))
+console.log(lhash.custom("string", 2, true))
 ```
 #### The functions
 They take 2 args, one of them is optional (the last one)
@@ -58,7 +58,7 @@ console.timeEnd("Normal sha256")
 
 console.log("Now we hash it with 512 layers using lhash")
 console.time("lhash with 512 encoding layers")
-console.log(lhash.512(string))
+console.log(lhash.l512(string))
 console.timeEnd("lhash with 512 encoding layers")
 ```
 

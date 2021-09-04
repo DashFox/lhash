@@ -3,20 +3,20 @@ const sha256 = require("sha256")
 var dlog = function(){}
 // Exports
 exports.lhash = {
-    "128":function(string) {
+    "l128":function(string) {
         return encode(string, 128)
     },
-    "256":function(string) {
+    "l256":function(string) {
         return encode(string, 256)
     },
-    "512":function(string) {
+    "l512":function(string) {
         return encode(string, 512)
     },
-    "64k":function(string) {
+    "l64k":function(string) {
         return encode(string, 65536)
     },
-    "custom":function(string) {
-        return encode(string, 65536)
+    "custom":function(string, layers, debug = false) {
+        return encode(string, layers, debug)
     }
 }
 
