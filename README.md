@@ -61,6 +61,11 @@ console.time("lhash with 512 encoding layers")
 console.log(lhash.l512(string))
 console.timeEnd("lhash with 512 encoding layers")
 ```
+## Links
+* Github Repo
+https://github.com/dashfox/lhash
+* NPMJS package
+https://www.npmjs.com/package/lhash
 
 # Credits
 
